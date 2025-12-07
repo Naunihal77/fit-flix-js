@@ -2,29 +2,44 @@
 
 import React from "react";
 import Link from "next/link";
+import HomeDropdown from "@/components/HomeDropdown";
+import GymsDropdown from "@/components/GymsDropdown";
+import ProgramsDropdown from "@/components/ProgramsDropdown";
+import PricingDropdown from "@/components/PricingDropdown";
+import ContactDropdown from "@/components/ContactDropdown";
 
 export default function Page(): JSX.Element {
   return (
     <>
-      {/* HEADER */}
-      <header className="header">
-        <div className="header-inner">
-          <div className="logo">
-            <div className="logo-icon" aria-hidden />
+      {/* Header / Top Nav */}
+      <header className="header" role="banner">
+        <div className="container header-inner">
+          <div className="logo" aria-hidden>
+            <div className="logo-icon" />
             <span className="logo-text">FIT-FLIX</span>
           </div>
 
           <nav className="nav" role="navigation" aria-label="Primary">
-            <ul>
-              <li><Link href="#">HOME</Link></li>
-              <li><Link href="#">Gym's</Link></li>
-              <li><Link href="#">PROGRAMS</Link></li>
-              <li><Link href="#">PRICING</Link></li>
-              <li><Link href="#">CONTACT</Link></li>
+            <ul className="nav-list">
+              <li>
+                <HomeDropdown />
+              </li>
+              <li>
+                <GymsDropdown />
+              </li>
+              <li>
+                <ProgramsDropdown />
+              </li>
+              <li>
+                <PricingDropdown />
+              </li>
+              <li>
+                <ContactDropdown />
+              </li>
             </ul>
           </nav>
 
-          <div className="header-actions">
+          <div className="header-actions" role="region" aria-label="Header actions">
             <button className="btn outline">SCHEDULE</button>
             <button className="btn solid">JOIN</button>
           </div>
@@ -32,48 +47,56 @@ export default function Page(): JSX.Element {
       </header>
 
       {/* HERO */}
-      <section className="hero">
-        {/* background video */}
+      <section className="hero" aria-label="Intro">
         <video
           className="hero-video"
           autoPlay
           muted
           loop
           playsInline
-          aria-hidden
+          aria-hidden="true"
         >
           <source src="/videos/background.mp4" type="video/mp4" />
+          {/* fallback text omitted intentionally */}
         </video>
 
         <div className="hero-overlay">
           <div className="badge">Fit-Flix</div>
 
-          <h1 className="hero-title">TRAIN. HEAL. GROW.</h1>
-          <p className="hero-sub">India's Premier Fitness & Wellness Ecosystem </p>
+          <h1 className="hero-title">FIND THE REAL U</h1>
+          <p className="hero-sub">
+            THE LONG GAME <span className="only">Only</span>
+          </p>
 
           <p className="hero-desc">
-            Interested in gym membership, training plans and group classes? Join Fit-Flix
-            and we’ll call you back to get you started.
+            Interested in gym membership, training plans and group classes? Join Fit-Flix and we’ll
+            call you back to get you started.
           </p>
 
           <div className="hero-ctas">
-            <button className="btn action">Request Callback</button>
-            <button className="btn secondary">View Plans</button>
+            <button className="btn action" aria-label="Request callback">
+              Request Callback
+            </button>
+            <button className="btn secondary" aria-label="View plans">
+              View Plans
+            </button>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="cta">
+      <section className="cta" aria-labelledby="cta-heading">
         <div className="container">
-          <h2>Where will you start your <span className="accent">Fit-Flix</span> journey?</h2>
+          <h2 id="cta-heading">
+            Where will you start your <span className="accent">Fit-Flix</span> journey?
+          </h2>
         </div>
       </section>
 
       {/* PREVIEW / GALLERY */}
-      <section className="preview">
+      <section className="preview" aria-label="Preview">
         <div className="container preview-inner">
-          <div className="preview-image">
+          <div className="preview-image" role="img" aria-label="Preview image">
             <img src="/images/bottom-image.jpg" alt="Fit-Flix preview" />
             <span className="preview-logo">Fit-Flix</span>
           </div>
@@ -81,17 +104,19 @@ export default function Page(): JSX.Element {
       </section>
 
       {/* WHY */}
-      <section className="why">
+      <section className="why" aria-labelledby="why-heading">
         <div className="container why-inner">
           <div className="why-image">
             <img src="/images/group-photo.jpg" alt="Community" />
           </div>
 
           <div className="why-text">
-            <h3>WHY FIT-FLIX?</h3>
+            <h3 id="why-heading">WHY FIT-FLIX?</h3>
 
             <div className="feature">
-              <div className="icon">💪</div>
+              <div className="icon" aria-hidden>
+                💪
+              </div>
               <div className="body">
                 <strong>Personal growth</strong>
                 <p>Structured plans and coaches that help you progress week-by-week.</p>
@@ -99,7 +124,9 @@ export default function Page(): JSX.Element {
             </div>
 
             <div className="feature">
-              <div className="icon">🏠</div>
+              <div className="icon" aria-hidden>
+                🏠
+              </div>
               <div className="body">
                 <strong>Community</strong>
                 <p>Friendly members, group classes and local meetups — your new tribe.</p>
@@ -107,7 +134,9 @@ export default function Page(): JSX.Element {
             </div>
 
             <div className="feature">
-              <div className="icon">🎯</div>
+              <div className="icon" aria-hidden>
+                🎯
+              </div>
               <div className="body">
                 <strong>Results</strong>
                 <p>Clear milestones, tracked progress, and trainer-led coaching.</p>
@@ -120,47 +149,53 @@ export default function Page(): JSX.Element {
       </section>
 
       {/* WORKOUTS */}
-      <section className="workouts">
+      <section className="workouts" aria-labelledby="workouts-heading">
         <div className="container">
-          <h3>THE WORKOUTS</h3>
+          <h3 id="workouts-heading">THE WORKOUTS</h3>
 
-          <div className="workout-grid">
-            <div className="witem"><img src="/images/boxing.jpg" alt="Boxing" /></div>
-            <div className="witem"><img src="/images/medball.jpg" alt="Medicine ball" /></div>
-            <div className="witem"><img src="/images/lifting.jpg" alt="Strength" /></div>
+          <div className="workout-grid" role="list">
+            <div className="witem" role="listitem">
+              <img src="/images/boxing.jpg" alt="Boxing class" />
+            </div>
+            <div className="witem" role="listitem">
+              <img src="/images/medball.jpg" alt="Medicine ball training" />
+            </div>
+            <div className="witem" role="listitem">
+              <img src="/images/lifting.jpg" alt="Strength training" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="community">
+      {/* COMMUNITY / TESTIMONIALS */}
+      <section className="community" aria-labelledby="community-heading">
         <div className="container">
-          <h3>OUR COMMUNITY</h3>
+          <h3 id="community-heading">OUR COMMUNITY</h3>
 
-          <div className="testimonials">
-            <blockquote className="card">
+          <div className="testimonials" role="list">
+            <article className="card" role="listitem">
               <div className="avatar">Y</div>
               <p className="quote">Amazing place — instructors actually care. Highly recommend.</p>
               <cite>— Yishai</cite>
-            </blockquote>
+            </article>
 
-            <blockquote className="card">
+            <article className="card" role="listitem">
               <div className="avatar">L</div>
               <p className="quote">Best boxing classes I've taken.</p>
               <cite>— Yen Li</cite>
-            </blockquote>
+            </article>
 
-            <blockquote className="card">
+            <article className="card" role="listitem">
               <div className="avatar">A</div>
               <p className="quote">Warm community and great coaching for all levels.</p>
               <cite>— Anith</cite>
-            </blockquote>
+            </article>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="site-footer">
+      <footer className="site-footer" role="contentinfo">
         <div className="container">
           <p>Fit-Flix © {new Date().getFullYear()}</p>
         </div>

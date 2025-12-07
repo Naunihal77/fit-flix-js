@@ -122,3 +122,55 @@ body{
   .workout-grid{grid-template-columns:1fr}
   .testimonials{grid-template-columns:1fr}
 }
+/* Dropdown nav styles */
+.nav-list { display:flex; gap:20px; align-items:center; list-style:none; margin:0; padding:0; }
+.nav-dropdown { position:relative; }
+.nav-button {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-weight:700;
+  text-transform:uppercase;
+  cursor:pointer;
+  padding: 6px 8px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.nav-button .chev { opacity:0.85; margin-left:6px; font-size:0.8rem; }
+
+.nav-menu {
+  position:absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  z-index: 80;
+}
+
+.nav-menu ul { margin:0; padding:0; list-style:none; }
+.nav-menu-item {
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  padding:10px 12px;
+  border-radius:6px;
+  text-decoration:none;
+  color:var(--white);
+}
+.nav-menu-item:hover {
+  background: rgba(212,160,23,0.06); /* subtle gold hover */
+  color: var(--gold);
+}
+.nav-menu-title { font-weight:800; font-size:0.95rem; }
+.nav-menu-desc { font-size:0.82rem; color: rgba(255,255,255,0.65); margin-top:4px; }
+
+/* small screens: simple fall-back (tap to open) */
+@media (max-width: 640px) {
+  .nav-list { display:none; } /* you will replace with mobile menu */
+  .nav-menu { left: auto; right: 0; }
+}
