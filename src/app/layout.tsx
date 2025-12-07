@@ -1,27 +1,23 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
-import "@/styles/home.css"; // <- your CSS file
+import "@/styles/home.css";  // ← add this
 
-const poppins = Poppins({
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+
+const mont = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Vigorous Fitness - Find The Real U",
-  description: "Vigorous Fitness",
+  title: "TRIBE Fitness Studio - Find Your Tribe",
+  description: "Community-driven fitness studio experience",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}`}>
+      <body className={mont.className}>
         {children}
       </body>
     </html>
