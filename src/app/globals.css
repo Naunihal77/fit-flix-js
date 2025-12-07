@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+/* Ensure navigation links in the header are black */
+.tribe-nav a {
+  color: #000000 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
