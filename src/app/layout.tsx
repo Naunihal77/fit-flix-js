@@ -10,8 +10,8 @@ const mont = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "TRIBE Fitness Studio - Find Your Tribe",
-  description: "Community-driven fitness studio experience",
+  title: "FitFlix - Complete Fitness ecosystem",
+  description: "Premium Gyms | Personalized Training | Nutrition Plans | Community Support",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

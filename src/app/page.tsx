@@ -15,29 +15,19 @@ export default function Page(): JSX.Element {
       <header className="header" role="banner">
         <div className="container header-inner">
           <div className="logo" aria-hidden>
-            <div className="logo-icon" />
+            <img src="/images/icon.png" alt="Fit-Flix logo" className="logo-icon" />
             <span className="logo-text">FIT-FLIX</span>
           </div>
 
           <nav className="nav" role="navigation" aria-label="Primary">
-            <ul className="nav-list">
-              <li>
-                <HomeDropdown />
-              </li>
-              <li>
-                <GymsDropdown />
-              </li>
-              <li>
-                <ProgramsDropdown />
-              </li>
-              <li>
-                <PricingDropdown />
-              </li>
-              <li>
-                <ContactDropdown />
-              </li>
-            </ul>
-          </nav>
+  <ul className="nav-list">
+    <li><HomeDropdown /></li>
+    <li><GymsDropdown /></li>
+    <li><ProgramsDropdown /></li>
+    <li><PricingDropdown /></li>
+    <li><ContactDropdown /></li>
+  </ul>
+</nav>
 
           <div className="header-actions" role="region" aria-label="Header actions">
             <button className="btn outline">SCHEDULE</button>
