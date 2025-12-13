@@ -6,7 +6,6 @@ import Link from "next/link";
 const ITEMS = [
   { label: "Overview", href: "/" },
   { label: "News", href: "/news" },
-  { label: "Careers", href: "/careers" },
 ];
 
 export default function HomeDropdown() {

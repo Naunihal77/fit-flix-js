@@ -16,7 +16,7 @@ const GYMS_ITEMS = [
 
 const WORKOUTS_ITEMS = [
   { label: "BOXING", href: "/workout/boxing" },
-  { label: "HIIT", href: "/workout/hiit" },
+  { label: "Events", href: "/workout/hiit" },
   { label: "YOGA", href: "/workout/yoga" },
   { label: "STRENGTH & CONDITIONING", href: "/workout/strength" },
 ];
