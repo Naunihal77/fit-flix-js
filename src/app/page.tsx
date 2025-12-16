@@ -15,21 +15,39 @@ export default function Page(): JSX.Element {
       <header className="header" role="banner">
         <div className="container header-inner">
           <div className="logo" aria-hidden>
-            <img src="/images/icon.png" alt="Fit-Flix logo" className="logo-icon" />
+            <img
+              src="/images/icon.png"
+              alt="Fit-Flix logo"
+              className="logo-icon"
+            />
             <span className="logo-text">FIT-FLIX</span>
           </div>
 
           <nav className="nav" role="navigation" aria-label="Primary">
-  <ul className="nav-list">
-    <li><HomeDropdown /></li>
-    <li><GymsDropdown /></li>
-    <li><ProgramsDropdown /></li>
-    <li><PricingDropdown /></li>
-    <li><ContactDropdown /></li>
-  </ul>
-</nav>
+            <ul className="nav-list">
+              <li>
+                <HomeDropdown />
+              </li>
+              <li>
+                <GymsDropdown />
+              </li>
+              <li>
+                <ProgramsDropdown />
+              </li>
+              <li>
+                <PricingDropdown />
+              </li>
+              <li>
+                <ContactDropdown />
+              </li>
+            </ul>
+          </nav>
 
-          <div className="header-actions" role="region" aria-label="Header actions">
+          <div
+            className="header-actions"
+            role="region"
+            aria-label="Header actions"
+          >
             <button className="btn outline">SCHEDULE</button>
             <button className="btn solid">JOIN</button>
           </div>
@@ -59,8 +77,8 @@ export default function Page(): JSX.Element {
           </p>
 
           <p className="hero-desc">
-            Interested in gym membership, training plans and group classes? Join Fit-Flix and we’ll
-            call you back to get you started.
+            Interested in gym membership, training plans and group classes? Join
+            Fit-Flix and we’ll call you back to get you started.
           </p>
 
           <div className="hero-ctas">
@@ -78,7 +96,8 @@ export default function Page(): JSX.Element {
       <section className="cta" aria-labelledby="cta-heading">
         <div className="container">
           <h2 id="cta-heading">
-            Where will you start your <span className="accent">Fit-Flix</span> journey?
+            Where will you start your <span className="accent">Fit-Flix</span>{" "}
+            journey?
           </h2>
         </div>
       </section>
@@ -109,7 +128,10 @@ export default function Page(): JSX.Element {
               </div>
               <div className="body">
                 <strong>Personal growth</strong>
-                <p>Structured plans and coaches that help you progress week-by-week.</p>
+                <p>
+                  Structured plans and coaches that help you progress
+                  week-by-week.
+                </p>
               </div>
             </div>
 
@@ -119,7 +141,10 @@ export default function Page(): JSX.Element {
               </div>
               <div className="body">
                 <strong>Community</strong>
-                <p>Friendly members, group classes and local meetups — your new tribe.</p>
+                <p>
+                  Friendly members, group classes and local meetups — your new
+                  tribe.
+                </p>
               </div>
             </div>
 
@@ -129,7 +154,9 @@ export default function Page(): JSX.Element {
               </div>
               <div className="body">
                 <strong>Results</strong>
-                <p>Clear milestones, tracked progress, and trainer-led coaching.</p>
+                <p>
+                  Clear milestones, tracked progress, and trainer-led coaching.
+                </p>
               </div>
             </div>
 
@@ -165,7 +192,9 @@ export default function Page(): JSX.Element {
           <div className="testimonials" role="list">
             <article className="card" role="listitem">
               <div className="avatar">Y</div>
-              <p className="quote">Amazing place — instructors actually care. Highly recommend.</p>
+              <p className="quote">
+                Amazing place — instructors actually care. Highly recommend.
+              </p>
               <cite>— Yishai</cite>
             </article>
 
@@ -177,7 +206,9 @@ export default function Page(): JSX.Element {
 
             <article className="card" role="listitem">
               <div className="avatar">A</div>
-              <p className="quote">Warm community and great coaching for all levels.</p>
+              <p className="quote">
+                Warm community and great coaching for all levels.
+              </p>
               <cite>— Anith</cite>
             </article>
           </div>

@@ -1,6 +1,7 @@
 // src/app/events/page.tsx
 import React from "react";
 import Link from "next/link";
+import Header from "@/components/Header";
 
 const EVENTS = [
   {
@@ -25,7 +26,9 @@ const EVENTS = [
 
 export default function EventsPage(): JSX.Element {
   return (
-    <main className="events-page">
+    <>
+      <Header />
+      <main className="events-page">
       {/* Hero */}
       <section className="events-hero">
         <h1>
@@ -66,6 +69,7 @@ export default function EventsPage(): JSX.Element {
           <button className="btn solid">CONTACT US</button>
         </Link>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

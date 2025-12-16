@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 const ITEMS = [
-  { label: "Workout", href: "/programs/boxing" },
+  { label: "Workout", href: "/workout" },
   { label: "Events", href: "/events" },
   { label: "Strength & Conditioning", href: "/programs/strength" },
   { label: "Kickboxing", href: "/programs/kickboxing" },
