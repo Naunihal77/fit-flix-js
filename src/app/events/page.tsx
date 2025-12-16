@@ -39,21 +39,23 @@ export default function EventsPage(): JSX.Element {
       {/* Events List */}
       <section className="events-list">
         {EVENTS.map((event, index) => (
-          <div className="event-card" key={index}>
-            <h3>{event.title}</h3>
+          <Link href={`/events/${index + 1}`} key={index}>
+            <div className="event-card">
+              <h3>{event.title}</h3>
 
-            <p className="event-meta">
-              📍 {event.location} &nbsp;•&nbsp; 📅 {event.date}
-            </p>
+              <p className="event-meta">
+                📍 {event.location} &nbsp;•&nbsp; 📅 {event.date}
+              </p>
 
-            <div className="event-labels">
-              {event.labels.map((label, i) => (
-                <span key={i} className="event-label">
-                  {label}
-                </span>
-              ))}
+              <div className="event-labels">
+                {event.labels.map((label, i) => (
+                  <span key={i} className="event-label">
+                    {label}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </section>
 

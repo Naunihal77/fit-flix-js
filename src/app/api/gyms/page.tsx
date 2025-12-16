@@ -34,7 +34,7 @@ const GymsPage: React.FC = () => {
               filter: 'brightness(0.35)'
             }}
           >
-            <source src={videoSrc} type="video/mp4" />  
+            <source src={videoSrc} type="background/mp4" />  
             Your browser does not support the video tag.
           </video>
 
