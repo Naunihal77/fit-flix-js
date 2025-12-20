@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-// --- 1. ALL NAVIGATION DATA ---
+// --- 1. NAVIGATION DATA ---
 const GYMS_ITEMS = [
   { label: "About Gyms", href: "/gyms" },
   { label: "Browse Gyms", href: "/browsegyms" },
@@ -31,16 +32,28 @@ const CONTACT_ITEMS = [
   { label: "Franchise Enquiries", href: "/franchise" },
 ];
 
-// --- 2. THE MAIN HEADER ---
+// --- 2. MAIN HEADER COMPONENT ---
 export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <div className="logo">
-          <div className="logo-icon" style={{ background: 'var(--gold)' }}></div> 
-          <span className="logo-text">FIT-FLIX</span>
-        </div>
         
+        {/* LOGO SECTION - Using your png from public/images/icon.png */}
+        <Link href="/" className="logo">
+          <div className="logo-icon-wrapper">
+            <Image 
+              src="/images/icon.png" 
+              alt="Fit-Flix Logo" 
+              width={40} 
+              height={40} 
+              priority
+              className="logo-img"
+            />
+          </div>
+          <span className="logo-text">FIT-FLIX</span>
+        </Link>
+        
+        {/* MAIN NAVIGATION */}
         <nav className="nav">
           <ul>
             <li><Link href="/">HOME</Link></li>
@@ -51,6 +64,7 @@ export default function Header() {
           </ul>
         </nav>
         
+        {/* ACTIONS */}
         <div className="header-actions">
           <button className="btn outline">SCHEDULE</button>
           <button className="btn solid">CREATE AN ACCOUNT</button>
@@ -60,7 +74,7 @@ export default function Header() {
   );
 }
 
-// --- 3. THE REUSABLE DROPDOWN LOGIC ---
+// --- 3. REUSABLE DROPDOWN COMPONENT ---
 function NavDropdown({ label, items }: { label: string, items: {label: string, href: string}[] }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
