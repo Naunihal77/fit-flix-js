@@ -1,10 +1,11 @@
 import "./globals.css";
 import "@/styles/home.css"; 
+import Header from "@/components/Header"; // Make sure this path is correct
+import PricingDropdown from "@/components/PricingDropdown"; 
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 // 1. Import your Header component (ensure the path matches where you saved it)
-import Header from "@/components/Header"; 
 
 const mont = Montserrat({
   subsets: ["latin"],
