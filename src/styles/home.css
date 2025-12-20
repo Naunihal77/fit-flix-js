@@ -219,4 +219,222 @@ body{
     transform: none; /* Disable centering transform */
     width: auto;
   }
+}/* --- FIXED VERTICAL ALIGNMENT --- */
+
+.dropdown {
+  position: relative; /* Context for absolute positioning */
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  /* top: 100% places it exactly at the bottom edge of the parent button */
+  top: 100%; 
+  /* left: 0 aligns the left edge of the menu with the left edge of the button */
+  left: 0; 
+  
+  /* Remove centering transforms that cause misalignment */
+  transform: none !important; 
+
+  display: flex !important;
+  flex-direction: column !important; /* Stack items top-to-bottom */
+  
+  background: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 220px;
+  padding: 8px 0;
+  margin-top: 5px; /* Small gap between button and menu */
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Ensure the UL doesn't inherit horizontal flex from the main nav */
+.dropdown-menu ul {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  width: 100%;
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  color: var(--white);
+  text-decoration: none;
+  text-align: left; /* Keep text aligned to the left */
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: rgba(212, 160, 23, 0.1);
+  color: var(--gold);
+}
+/* --- BROWSE GYMS PAGE STYLES --- */
+
+.browse-gyms-page {
+  padding-top: 120px;
+  background: var(--black);
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 span {
+  color: var(--gold);
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.search-input {
+  flex: 1;
+  background: #111;
+  border: 1px solid #333;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.results-count {
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* --- GYM CARD --- */
+
+.gym-card {
+  display: flex;
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.gym-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.gym-card-image {
+  width: 350px;
+  position: relative;
+}
+
+.gym-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-type {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--gold);
+  color: black;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.gym-card-content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.verified-tag {
+  color: #4caf50;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gym-header h3 {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.location-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.tag-pill {
+  background: #1a1a1a;
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(212, 160, 23, 0.2);
+}
+
+.gym-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+}
+
+.timing {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.action-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 860px) {
+  .gym-card {
+    flex-direction: column;
+  }
+  .gym-card-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;  /* This aligns it exactly with the left edge of the button */
+  transform: none !important; 
+  /* ... rest of your code ... */
 }
