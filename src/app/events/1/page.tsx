@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import OptimizedImage from "@/components/OptimizedImage";
 import { eventApi, Event } from "@/lib/api/api";
 
 interface PageProps {

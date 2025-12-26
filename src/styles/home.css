@@ -478,4 +478,18 @@ body{
 @media (max-width: 768px) {
     .features-list { grid-template-columns: 1fr; }
     .workout-hero h1 { font-size: 2rem; }
+}.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #0c0c0c;
+  border: 1px solid #d4a017;
+  padding: 1rem;
+  min-width: 240px;
+  z-index: 9999; /* Forces the menu to appear above everything else */
+  margin-top: 10px;
 }
